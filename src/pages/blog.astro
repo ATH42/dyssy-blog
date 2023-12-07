@@ -12,7 +12,7 @@ const blogPosts = await getCollection("blog");
         return (
           <div class="post">
             <h2>
-              <a href={`/blog/${post.data.title}`}>{post.data.title}</a>
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
             </h2>
             <time datetime={post.data.date.toISOString()}>
               {post.data.date.toDateString()}
