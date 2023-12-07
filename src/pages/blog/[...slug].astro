@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/page.astro";
+
+export const getStaticPaths = async () => {
+  const blogPosts = await getCollection("blog");
+  return blogPosts.map((post) => {
+    return {
+      params: { slug: post.slug },
+
+      props: { post },
+    };
+  });
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout>
+  <time datetime={post.data.date.toISOString()}>
+    {post.data.date.toDateString()}
+  </time>
+  <p class="tight">{post.data.description}</p>
+  <Content />
+</Layout>
+
+<style>
+  .tight {
+    font-size: 1rem;
+    letter-spacing: -0.04rem;
+    color:;
+  }
+</style>
