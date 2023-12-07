@@ -193,7 +193,6 @@ const navItems = [
     font-size: 1.25rem;
     font-weight: 700;
     text-decoration: none;
-    padding-right: 1rem;
   }
 
   footer {
@@ -203,19 +202,15 @@ const navItems = [
     bottom: 0;
     width: 100%;
   }
-  header {
-    border-radius: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-  }
   footer p {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
   }
-
+  header a {
+    margin-top: 1rem;
+  }
   footer a {
     color: var(--color-gray-600);
     display: block;
@@ -235,9 +230,14 @@ const navItems = [
       flex-direction: row;
     }
   }
+
   @media (min-width: 400px) {
     header {
       flex-direction: row;
+      border-radius: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 2rem;
     }
   }
 </style>
