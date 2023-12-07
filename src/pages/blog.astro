@@ -18,7 +18,9 @@ const blogPosts = await getCollection("blog");
               {post.data.date.toDateString()}
             </time>
             <p>{post.data.description}</p>
-            <a href={`/blog/${post.slug}`}>read post</a>
+            <a class="big-link small-link" href={`/blog/${post.slug}`}>
+              read post &rarr;
+            </a>
           </div>
         );
       })
@@ -48,7 +50,17 @@ const blogPosts = await getCollection("blog");
     color: var(--color-gray-700);
     display: block;
     font-size: 0.875rem;
-    margin: 0.5rem 0 0;
+    margin: 0.1rem 0 -0.6rem;
+    color: inherit;
+  }
+
+  .small-link {
+    font-size: 0.5rem;
+    font-weight: 300;
+    margin: 0.6rem 0 0;
+    padding: 0.2rem 0.6rem;
+    text-decoration: none;
+    transition: 150ms background-color linear;
   }
 
   .post p {

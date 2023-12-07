@@ -11,8 +11,9 @@ description: >
 ## Introduction: A Surprising Question, An Unexpected Journey
 
 A few weeks ago, a simple message in our group chat caught me off guard:
-`@alex, könntest du dir vorstellen mal ein game zu programmieren?`
-Translation: "Alex, could you imagine programming a game?" It was unexpected, to say the least.
+
+`Alex, could you imagine programming a game?`
+It was unexpected, to say the least.
 
 But that seemingly innocuous question stirred something within me. Suddenly, I realized the time had arrived. I needed to start making a game. Perhaps all I needed was someone to believe I could do it.
 
@@ -20,7 +21,11 @@ Time isn't and hopefully never will be a concern; it matters much less than the 
 
 ## The Passion Ignited
 
-It's incredible how a single question can be a catalyst for transformation. From that moment, I plunged into learning Unity, exploring C#, and establishing a presence on various platforms - Kofi, YouTube, a blog, Twitch - seeking to document this newfound journey. It's been a whirlwind of excitement and uncertainty.
+It's incredible how a single question can be a catalyst for transformation. From that moment, I plunged into learning Unity, exploring C#, and establishing a presence on various platforms - Kofi, YouTube, a blog, Twitch - seeking to document this newfound journey.
+
+I want to emphasize that setting up those platforms and social media was more random than knowing what their exact purpose should be or evolve into. I guess I will paint a clearer picture for myself as I go. Perhaps I will drop some of them or even expand on them for reasons that are not clear to me at this point in time.
+
+It’s been a whirlwind of excitement and uncertainty.
 
 ## The Self-Doubt Within
 
@@ -28,4 +33,6 @@ Yet, amidst this whirlwind, I find myself consistently second-guessing. Doubts c
 
 ## Embracing the Challenge
 
-But here's what keeps me going: the commitment to doing this right, to doing it professionally. The past few weeks have been a frenzy of learning Unity and C#, navigating Aseprite, and documenting every step. It's been crazy, but I'm determined.
+But here's what keeps me going: the commitment to doing this right, to doing it professionally, not knowing what will come of it and tending to a childhood dream of mine. The past few weeks have been a frenzy of learning Unity and C#, navigating Aseprite, and documenting every step.
+
+It's been crazy, but I'm determined.
