@@ -85,8 +85,12 @@ const navItems = [
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
-    font-size: 18px;
+ font-size: 18px;
     line-height: 1.45;
+    height: 100%;
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    color: #ffe6cc;
+  }
   }
 
   body {
@@ -97,7 +101,6 @@ const navItems = [
       #8989ba 52%,
       #8989ba 100%
     );
-    height: 100dvh;
     color: #ffe6cc;
   }
 
@@ -172,6 +175,7 @@ const navItems = [
     font-size: 1.25rem;
     font-weight: 700;
     text-decoration: none;
+    padding-right: 1rem;
   }
 
   footer {
@@ -181,7 +185,9 @@ const navItems = [
     bottom: 0;
     width: 100%;
   }
-
+header {
+    border-radius: 2rem;
+  }
   footer p {
     display: flex;
     flex-wrap: wrap;
