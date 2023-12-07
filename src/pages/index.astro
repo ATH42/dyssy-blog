@@ -7,12 +7,12 @@ import ShopItems from "../components/shop-items.astro";
   <section class="block hero">
     <div class="cta">
       <h1>dyssy.</h1>
-      <p class="lede">Blog. Dev-Log. Journal. An oddyssey companion.</p>
+      <p class="lede">Blog. Dev-Log. Journal. <br /> An oddyssey companion.</p>
       <a href="/blog" class="big-link">Read the Blog</a>
     </div>
 
     <!-- <img -->
-    <!--   src="/purple.png" -->
+    <!--   src="/sandwich-hero.jpg" -->
     <!--   alt="sandwich on a plate. Taco style" -->
     <!--   loading="eager" -->
     <!--   decoding="async" -->
@@ -28,27 +28,6 @@ import ShopItems from "../components/shop-items.astro";
     overflow: hidden;
     padding: 1rem 5% 40%;
     position: relative;
-    background: hsla(252, 40%, 29%, 1);
-
-    background: linear-gradient(
-      90deg,
-      hsla(252, 40%, 29%, 1) 0%,
-      hsla(270, 77%, 71%, 1) 100%
-    );
-
-    background: -moz-linear-gradient(
-      90deg,
-      hsla(252, 40%, 29%, 1) 0%,
-      hsla(270, 77%, 71%, 1) 100%
-    );
-
-    background: -webkit-linear-gradient(
-      90deg,
-      hsla(252, 40%, 29%, 1) 0%,
-      hsla(270, 77%, 71%, 1) 100%
-    );
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#392D69", endColorstr="#B57BEE", GradientType=1 );
   }
 
   .hero :not(.hero-image) {
@@ -63,18 +42,12 @@ import ShopItems from "../components/shop-items.astro";
   .hero h1 {
     font-size: clamp(1.75rem, 10vw, 2.5rem);
     margin: 0;
-    background: -webkit-linear-gradient(45deg, #ffc371, #ff5f6d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .lede {
     font-size: clamp(1rem, 5.75vw, 1.5rem);
     line-height: 1.25;
     margin: 0.5rem 0 0;
-    background: -webkit-linear-gradient(45deg, #ffc371, #ff5f6d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .hero-image {
@@ -82,8 +55,8 @@ import ShopItems from "../components/shop-items.astro";
     inset: 0;
     object-fit: cover;
     object-position: 28% 0%;
-    height: 100%;
-    width: 100%;
+    height: 135%;
+    width: 135%;
     z-index: 1;
   }
 

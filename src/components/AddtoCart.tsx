@@ -1,11 +1,10 @@
 /** @jsxImportSource react */
 
-import { addItemToCart } from '../stores/cart';
+function langSwitcher() {
 
-export const AddToCart = ({ item }: { item: ShopItem }) => {
+}
+
+export const AddToCart = () => {
 	return (
-		<button className="big-link" onClick={() => addItemToCart(item)}>
-			Add to Cart
-		</button>
 	);
 };

@@ -33,8 +33,8 @@ const navItems = [
   <body>
     <header>
       <a href="/" rel="home" class="nav">
-        <span role="img" aria-label="">💥</span>
-         dyssy
+        <span role="img" aria-label=""></span>
+         dyssy.
       </a>
 
       <nav>
@@ -91,7 +91,13 @@ const navItems = [
 
   body {
     margin: 0;
-    background-color: #392d69;
+    background-image: linear-gradient(
+      to top,
+      #a7a6cb 0%,
+      #8989ba 52%,
+      #8989ba 100%
+    );
+    height: 100dvh;
     color: #ffe6cc;
   }
 
@@ -108,8 +114,8 @@ const navItems = [
   }
 
   .big-link {
-    background-color: #ffc371;
-    border: 0;
+    color: #ffe6cc;
+    border: 2px solid #ffe6cc;
     border-radius: 0.25rem;
     display: inline-block;
     font-size: 1rem;
@@ -121,12 +127,12 @@ const navItems = [
   }
 
   .big-link:hover {
-    background-color: var(--color-gray-700);
-    color: #ffc371;
+    background-color: #ffe6cc;
+    color: #8989ba;
   }
 
   .big-link:is(:active, :focus) {
-    outline: 2px solid var(--color-gray-900);
+    outline: 2px solid #ffe6cc;
     outline-offset: 4px;
   }
 </style>
@@ -154,11 +160,11 @@ const navItems = [
   nav {
     display: flex;
     gap: 1rem;
-    color: #392d69;
+    color: #8989ba;
   }
 
   .nav {
-    color: #392d69 !important;
+    color: #8989ba !important;
   }
 
   nav a {
