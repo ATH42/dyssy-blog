@@ -32,7 +32,7 @@ const navItems = [
   </head>
   <body>
     <header>
-      <a href="/" rel="home">
+      <a href="/" rel="home" class="nav">
         <span role="img" aria-label="">💥</span>
          dyssy
       </a>
@@ -91,6 +91,8 @@ const navItems = [
 
   body {
     margin: 0;
+    background-color: #392d69;
+    color: #ffe6cc;
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
@@ -106,10 +108,9 @@ const navItems = [
   }
 
   .big-link {
-    background-color: var(--color-gray-900);
+    background-color: #ffc371;
     border: 0;
     border-radius: 0.25rem;
-    color: white;
     display: inline-block;
     font-size: 1rem;
     font-weight: 700;
@@ -121,6 +122,7 @@ const navItems = [
 
   .big-link:hover {
     background-color: var(--color-gray-800);
+    color: #ffc371;
   }
 
   .big-link:is(:active, :focus) {
@@ -152,6 +154,11 @@ const navItems = [
   nav {
     display: flex;
     gap: 1rem;
+    color: #392d69;
+  }
+
+  .nav {
+    color: #392d69 !important;
   }
 
   nav a {
