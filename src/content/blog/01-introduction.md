@@ -1,12 +1,10 @@
 ---
-title: 💥 Sparked!  A Journey into gamedev.
+title: Sparked!  A Journey into gamedev.
 slug: sparked-dyssy
 date: 2023-12-06
 description: >
   delving into the world of gamedev, accompanied by passion and self doubt.
 ---
-
-# Sparked: A Journey into Game Development
 
 ## Introduction: A Surprising Question, An Unexpected Journey
 

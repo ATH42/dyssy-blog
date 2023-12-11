@@ -12,12 +12,19 @@ const blogPosts = await getCollection("blog");
         return (
           <div class="post">
             <h2>
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              <a transition:name="title" href={`/blog/${post.slug}`}>
+                {post.data.title}
+              </a>
             </h2>
-            <time datetime={post.data.date.toISOString()}>
-              {post.data.date.toDateString()}
-            </time>
-            <p>{post.data.description}</p>
+            <div transition:name="post">
+              <time
+                transition:name="date"
+                datetime={post.data.date.toISOString()}
+              >
+                {post.data.date.toDateString()}
+              </time>
+              <p transition:name="description">{post.data.description}</p>
+            </div>
             <a class="big-link small-link" href={`/blog/${post.slug}`}>
               read post &rarr;
             </a>

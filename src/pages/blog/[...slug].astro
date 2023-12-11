@@ -18,17 +18,31 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <time datetime={post.data.date.toISOString()}>
-    {post.data.date.toDateString()}
-  </time>
-  <p class="tight">{post.data.description}</p>
+  <div class="header">
+    <div transition:name="post">
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toDateString()}
+      </time>
+      <p class="tight">{post.data.description}</p>
+    </div>
+
+    <h1 class="title" transition:name="title" }>
+      {post.data.title}
+    </h1>
+  </div>
   <Content />
 </Layout>
 
 <style>
+  .header {
+    margin: 0;
+  }
+  .title {
+  }
   .tight {
     font-size: 1rem;
     letter-spacing: -0.04rem;
-    color:;
+    line-height: 0.7rem;
+    margin-top: -0.3rem;
   }
 </style>

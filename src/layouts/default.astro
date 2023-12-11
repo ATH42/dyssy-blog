@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 const navItems = [
   // {
   // 	path: '/shop',
@@ -25,10 +27,11 @@ const navItems = [
       href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap"
       rel="stylesheet"
     />
-
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>dyssy. gamedev Oddyssey.</title>
+
+    <ViewTransitions />
   </head>
   <body>
     <header>
@@ -72,175 +75,170 @@ const navItems = [
         </a>
       </div>
     </footer>
-  </body>
+    <style is:global>
+      :root {
+        --color-gray-100: hsl(275, 30%, 95%);
+        --color-gray-200: hsl(275, 21%, 85%);
+        --color-gray-600: hsl(275, 11%, 43%);
+        --color-gray-700: hsl(275, 26%, 23%);
+        --color-gray-800: hsl(275deg 40% 20% / 1);
+        --color-gray-900: hsl(275deg 40% 10% / 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        font-size: 18px;
+        line-height: 1.45;
+        min-height: 100%;
+        background-image: linear-gradient(
+          to top,
+          #a7a6cb 0%,
+          #8989ba 52%,
+          #8989ba 100%
+        );
+        color: #ffe6cc;
+      }
+
+      body {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.45;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1; /* This pushes the footer to the bottom */
+        padding: 0 5%; /* Adjust padding as needed */
+      }
+
+      :is(h1, h2, h3, h4, h5, h6) {
+        font-family: "DynaPuff", cursive;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 1.5rem 0 0;
+      }
+
+      .block {
+        padding: 3rem max(5vw, calc((100% - 800px) / 2));
+        padding-bottom: 8rem;
+      }
+
+      .big-link {
+        color: #ffe6cc;
+        border: 2px solid #ffe6cc;
+        border-radius: 0.25rem;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0.5rem 0 0;
+        padding: 0.5rem 1.25rem;
+        text-decoration: none;
+        transition: 150ms background-color linear;
+      }
+
+      .big-link:hover {
+        background-color: #ffe6cc;
+        color: #8989ba;
+      }
+
+      .big-link:is(:active, :focus) {
+        outline: 2px solid #ffe6cc;
+        outline-offset: 4px;
+      }
+    </style>
+
+    <!-- NOTE:  SCOPED STYLES  -->
+
+    <style>
+      header {
+        align-items: baseline;
+        background: var(--color-gray-100);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      a[rel="home"] {
+        color: inherit;
+        font-family: "DynaPuff", cursive;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        color: #8989ba;
+      }
+
+      .nav {
+        color: #8989ba !important;
+      }
+
+      nav a {
+        color: inherit;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding-right: 1rem;
+      }
+
+      footer {
+        font-size: 0.75rem;
+        padding: 3rem 5% 2rem;
+        position: fixed;
+        bottom: 0;
+      }
+      footer p {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+      header a {
+        margin-top: 1rem;
+      }
+      footer a {
+        color: var(--color-gray-600);
+        display: block;
+        margin: 0.5rem;
+      }
+      .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+
+      @media (min-width: 400px) {
+        .socials {
+          display: flex;
+          justify-content: end;
+          flex-direction: row;
+        }
+      }
+
+      @media (min-width: 400px) {
+        header {
+          flex-direction: row;
+          border-radius: 1rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+          margin-top: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    </style>
+  </body><!-- NOTE: GLOBAL STYLES -->
 </html>
-
-<!-- NOTE: GLOBAL STYLES -->
-
-<style is:global>
-  :root {
-    --color-gray-100: hsl(275, 30%, 95%);
-    --color-gray-200: hsl(275, 21%, 85%);
-    --color-gray-600: hsl(275, 11%, 43%);
-    --color-gray-700: hsl(275, 26%, 23%);
-    --color-gray-800: hsl(275deg 40% 20% / 1);
-    --color-gray-900: hsl(275deg 40% 10% / 1);
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    font-size: 18px;
-    line-height: 1.45;
-    min-height: 100%;
-    background-image: linear-gradient(
-      to top,
-      #a7a6cb 0%,
-      #8989ba 52%,
-      #8989ba 100%
-    );
-    color: #ffe6cc;
-  }
-
-  body {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.45;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  main {
-    flex: 1; /* This pushes the footer to the bottom */
-    padding: 0 5%; /* Adjust padding as needed */
-  }
-
-  :is(h1, h2, h3, h4, h5, h6) {
-    font-family: "DynaPuff", cursive;
-    font-weight: 700;
-    line-height: 1.1;
-    margin: 1.5rem 0 0;
-  }
-
-  .block {
-    padding: 3rem max(5vw, calc((100% - 800px) / 2));
-    padding-bottom: 8rem;
-  }
-
-  .big-link {
-    color: #ffe6cc;
-    border: 2px solid #ffe6cc;
-    border-radius: 0.25rem;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0.5rem 0 0;
-    padding: 0.5rem 1.25rem;
-    text-decoration: none;
-    transition: 150ms background-color linear;
-  }
-
-  .big-link:hover {
-    background-color: #ffe6cc;
-    color: #8989ba;
-  }
-
-  .big-link:is(:active, :focus) {
-    outline: 2px solid #ffe6cc;
-    outline-offset: 4px;
-  }
-</style>
-
-<!-- NOTE:  SCOPED STYLES  -->
-
-<style>
-  header {
-    align-items: baseline;
-    background: var(--color-gray-100);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-
-  a[rel="home"] {
-    color: inherit;
-    font-family: "DynaPuff", cursive;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  nav {
-    display: flex;
-    gap: 1rem;
-    color: #8989ba;
-  }
-
-  .nav {
-    color: #8989ba !important;
-  }
-
-  nav a {
-    color: inherit;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding-right: 1rem;
-  }
-
-  footer {
-    font-size: 0.75rem;
-    padding: 3rem 5% 2rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  footer p {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-  header a {
-    margin-top: 1rem;
-  }
-  footer a {
-    color: var(--color-gray-600);
-    display: block;
-    margin: 0.5rem;
-  }
-  .socials {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-
-  @media (min-width: 400px) {
-    .socials {
-      display: flex;
-      width: 100%;
-      justify-content: end;
-      flex-direction: row;
-    }
-  }
-
-  @media (min-width: 400px) {
-    header {
-      flex-direction: row;
-      border-radius: 1rem;
-      margin-left: 2rem;
-      margin-right: 2rem;
-      margin-top: 2rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-</style>
